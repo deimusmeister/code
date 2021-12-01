@@ -32,7 +32,7 @@ int main() {
     // Consumer
     std::thread t2(task2, f);
 
-    // Producers
+    // Producer
     std::thread t1(task1, std::move(task));
 
     t1.join();
