@@ -31,14 +31,12 @@ void task4(std::stop_token token) {
 }
 
 int main() {
-    std::stop_source source;  
+    std::stop_source source;
+    auto token = source.get_token();
     
     // Producers
     std::thread t1(task1, source);
     std::thread t2(task2, source);
-    
-
-    auto token = source.get_token();
 
     // Consumers
     std::thread t3(task3, token);
