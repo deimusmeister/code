@@ -3,7 +3,7 @@
 #include <string_view>
 
 /**
- * This is a minimal example of std::string_view demo
+ * This is a minimal example of std::string_view usage
  * printValue will not make any copy of str
  */
 void printValue(std::string_view strv) {
